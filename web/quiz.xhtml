@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view>
+<h:head><title>Quiz</title></h:head>
+<h:body>
+    <h:form>
+        <p:panel id="question" header="The number of the question # #{testBean.numberOfCurrentQuestion}" style="margin-bottom: 20px;">
+            <table>
+                <tr>
+                    <td>
+                        <h:outputText value="#{testBean.currentQuestion.question}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h:outputText value="#{testBean.thePicture}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h:outputText value="#{testBean.currentQuestion.hint}"/>
+                    </td>
+                </tr>
+            </table>
+            <p:selectOneRadio value="#{testBean.markedValue}">
+                <f:selectItem itemValue="1" itemLabel="#{testBean.currentQuestion.variants[0]}"/>
+                <f:selectItem itemValue="2" itemLabel="#{testBean.currentQuestion.variants[1]}"/>
+                <f:selectItem itemValue="3" itemLabel="#{testBean.currentQuestion.variants[2]}"/>
+                <f:selectItem itemValue="4" itemLabel="#{testBean.currentQuestion.variants[3]}"/>
+            </p:selectOneRadio>
+        </p:panel>
+        <h:panelGrid columns="4" cellpadding="5"></h:panelGrid>
+        <p:commandButton value="Answer" action="#{testBean.answerTheQuestion}" update="question"/>
+        <p:commandButton value="Skip" action="#{testBean.skipTheQuestion}" update="question"/>
+        <p:commandButton value="Return" action="#{testBean.returnToPreviousQuestion}" update="question"/>
+        <p:commandButton value="Finish" action="#{testBean.finishTheTest}"/>
+    </h:form>
+</h:body>
+</f:view>
+</html>

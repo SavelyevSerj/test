@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://java.sun.com/jsf/html">
+<f:view>
+<h:head><title>The greeting</title></h:head>
+<h:body>
+   <h:form>
+      <h:messages></h:messages>
+      <h:panelGrid columns="3" cellpadding="5">
+         <p:outputLabel value="Please, type your name." for="username"/>
+         <p:inputText value="#{testBean.user.name}" id="username" required="true"/>
+         <p:outputLabel value="Please, type your surname." for="usersurname"/>
+         <p:inputText value="#{testBean.user.surname}" id="usersurname" required="true"/>
+         <p:outputLabel value="Please, type your group number." for="usergroup"/>
+         <p:inputText value="#{testBean.user.groupNumber}" id="usergroup" required="true"/>
+      </h:panelGrid>
+      <p:commandButton value="Start" action="#{testBean.startTheTest}" ajax="false"/>
+   </h:form>
+</h:body>
+</f:view>
+</html>
