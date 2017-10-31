@@ -19,9 +19,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="GlassFish 4.1.2.1722 - JSF" level="application_server_libraries" />
-    <orderEntry type="library" scope="PROVIDED" name="GlassFish 4.1.2.1722 - CDI: Contexts and Dependency Injection" level="application_server_libraries" />
-    <orderEntry type="library" scope="PROVIDED" name="GlassFish 4.1.2.1722" level="application_server_libraries" />
     <orderEntry type="library" name="PrimeFaces-6.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="GlassFish 4.1.2.173 - JSF" level="application_server_libraries" />
+    <orderEntry type="library" scope="PROVIDED" name="GlassFish 4.1.2.173 - CDI: Contexts and Dependency Injection" level="application_server_libraries" />
+    <orderEntry type="library" scope="PROVIDED" name="GlassFish 4.1.2.173" level="application_server_libraries" />
   </component>
 </module>

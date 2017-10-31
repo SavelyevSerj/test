@@ -16,10 +16,14 @@ public class Question {
         this.question = question;
         this.fileName = fileName;
         this.hint = hint;
-        this.variants[0] = new Variant(variant1);
-        this.variants[1] = new Variant(variant2);
-        this.variants[2] = new Variant(variant3);
-        this.variants[3] = new Variant(variant4);
+        this.variants = new Variant[]{
+                new Variant(variant1),
+                new Variant(variant2),
+                new Variant(variant3),
+                new Variant(variant4)
+        };
+
+
     }
 
     public Question() {

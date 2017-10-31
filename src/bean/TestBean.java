@@ -173,7 +173,7 @@ public class TestBean implements Serializable{
 
     public void returnToPreviousQuestion () {
         numberOfCurrentQuestion--;
-        if (numberOfCurrentQuestion == 1) numberOfCurrentQuestion = 20;
+        if (numberOfCurrentQuestion == 0) numberOfCurrentQuestion = 20;
     }
 
     public String finishTheTest() {
